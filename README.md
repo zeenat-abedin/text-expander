@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+## TextExpander React Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React component provides a way to collapse and expand text content, allowing users to view a summary or the full text as needed. It uses the `useState` hook to manage the expanded state of the text and provides customizable options such as the number of words to collapse to, custom button text, and button color.
 
-## Available Scripts
+### Installation
 
-In the project directory, you can run:
+To use the `TextExpander` component, you can install it from npm:
 
-### `npm start`
+```bash
+npm install textexpander-react
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once installed, you can import the `TextExpander` component into your React application and use it as follows:
 
-### `npm test`
+```javascript
+import TextExpander from "textexpander-react";
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default function App() {
+  return (
+    <div>
+      <TextExpander expanded={true}>
+        Space travel is the ultimate adventure! Imagine soaring past the stars
+        and exploring new worlds. It's the stuff of dreams and science fiction,
+        but believe it or not, space travel is a real thing. Humans and robots
+        are constantly venturing out into the cosmos to uncover its secrets and
+        push the boundaries of what's possible.
+      </TextExpander>
 
-### `npm run build`
+      <TextExpander
+        collapsedNumWords={20}
+        expandButtonText="Show text"
+        collapseButtonText="Collapse text"
+        buttonColor="#ff6622"
+      >
+        Space travel requires some seriously amazing technology and
+        collaboration between countries, private companies, and international
+        space organizations. And while it's not always easy (or cheap), the
+        results are out of this world. Think about the first time humans stepped
+        foot on the moon or when rovers were sent to roam around on Mars.
+      </TextExpander>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      <TextExpander expanded={true} className="box">
+        Space missions have given us incredible insights into our universe and
+        have inspired future generations to keep reaching for the stars. Space
+        travel is a pretty cool thing to think about. Who knows what we'll
+        discover next!
+      </TextExpander>
+    </div>
+  );
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Props
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `TextExpander` component accepts the following props:
 
-### `npm run eject`
+- `collapsedNumWords`: The maximum number of words to display when the text is collapsed. Defaults to 10.
+- `expandButtonText
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Generated by [BlackboxAI](https://www.blackbox.ai)
